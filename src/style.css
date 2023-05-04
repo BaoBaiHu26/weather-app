@@ -1,0 +1,72 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+div.col-6.mt-5.p-4.border {
+  border-radius: 20px;
+}
+h3.mb-3.title {
+  margin-left: 10px;
+  letter-spacing: 1px;
+  text-transform: bold;
+}
+.btn.btn-primary.w-100.mx-auto {
+  background-color: #efefef;
+  border: none;
+  color: #807979;
+}
+.btn.btn-primary.w-100.mx-auto:hover {
+  background-color: #807979;
+  color: #efefef;
+}
+::placeholder {
+  letter-spacing: 2px;
+}
+div.day-weather {
+  padding-left: 18px;
+}
+h4.city-name {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+li.datentime.ms-2 {
+  list-style: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+span.temperature {
+  font-size: 45px;
+}
+sup {
+  font-size: 18px;
+}
+h1.ms-5.text-end.bigemoji {
+  font-size: 45px;
+}
+p.ms-2.description {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+span.ms-2.text-end.extras {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+div.col-md-3.search-button {
+  display: block;
+  margin: 0 auto;
+}
+section.border.mb-3 {
+  border-radius: 10px;
+}
+h5.text-center.date {
+  font-size: 16px;
+}
+p.text-center.minmax {
+  font-size: 15px;
+}
+p.results.text-muted {
+  font-size: 13px;
+}
+p.github {
+  font-size: 13px;
+  letter-spacing: 1px;
+}

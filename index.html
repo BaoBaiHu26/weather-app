@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css"
+      integrity="sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css">
+    <title>Landing-Page</title>
+  </head>
+  <body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 mt-5 p-4 border">
+                <h3 class="mb-3 title"><strong> Weather</strong></h3>
+                <!-- row 2 -->
+                <div class="container">
+                    <div class="row mb-3">
+                        
+                        <div class="col-md-6">
+                            <input type="search" placeholder=" 🔍  Search for a city ....." class="form-control search-input">
+                        </div>
+                        <div class="col-md-3 search-button ps-2">
+                            <input type="submit" value="Search" class="btn btn-primary w-100 mx-auto">
+                        </div>
+                        <div class="col-md-3 search-button">
+                            <input type="submit" value="Current" class="btn btn-primary w-100 mx-auto">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <section class="border mb-3">
+
+                <!-- row 3 -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 pt-3 ps-3">
+                            <h4 class="city-name"><strong>City Name</strong> </h4>
+                                <li class="datentime ms-2">Wednesday</li>
+                                <li class="datentime ms-2"> -- : -- PM </li>
+                            
+                        </div>
+
+                        <div class="col-md-2 pt-4">
+                            <h1 class="ms-5 text-end bigemoji">☀️</h1>
+                        </div>
+
+                        <div class="col-md-4 pt-3">
+                            <span class="temperature me-2">36 <sup class="units mb-2"><a href=""> °C</a> / <a href="">°F</a></sup></span>
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <!-- row-4 -->
+                <div class="container">
+                    <div class="row mt-3">
+                        <div class="col-md-5">
+                            <p class="ms-2 description">Description</p>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5">
+                            <span class="ms-2 text-end extras">Humidity : - % , Wind : - mp/h</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <br />
+                <!-- row 5 -->
+                <div class="container">
+                    <div class="d-flex flex-row">
+                        <div class="">
+                            <h5 class="text-center date">Wed</h5>
+                            <h3 class="text-center">⛅️</h3>
+                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
+
+                        </div>
+                        <div class="day-weather">
+                            <h5 class="text-center date">Thurs</h5>
+                            <h3 class="text-center">⛅️</h3>
+                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
+
+                        </div>
+                        <div class="day-weather">
+                            <h5 class="text-center date">Fri</h5>
+                            <h3 class="text-center">⛅️</h3>
+                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
+
+                        </div>
+                        <div class="day-weather">
+                            <h5 class="text-center date">Sat</h5>
+                            <h3 class="text-center">⛅️</h3>
+                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
+
+                        </div>
+                        <div class="day-weather">
+                            <h5 class="text-center date">Sun</h5>
+                            <h3 class="text-center">⛅️</h3>
+                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
+
+                        </div>
+                        <div class="day-weather">
+                            <h5 class="text-center date">Mon</h5>
+                            <h3 class="text-center">⛅️</h3>
+                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
+
+                        </div>
+                        <div class="day-weather">
+                            <h5 class="text-center date">Tue</h5>
+                            <h3 class="text-center">⛅️</h3>
+                            <p class="text-center minmax">🔺<span>--</span> , 🔻<span>--</span>  </p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- row 6 -->
+                <div class="container">
+                    <div class="row">
+                        <p class="results text-muted">results for latitude: -----.---- , longitude: -----.---</p>
+                </div>
+                </section>
+
+                </div>
+                <div class="container">
+                    <div class="row mt-3">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <p class="github"><a href="">Open Source Code</a> by Phyu Sin Khine</p>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </section>
+    
+  </body>
+</html>
