@@ -15,14 +15,16 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
     <title>Landing-Page</title>
   </head>
   <body>
-    <section>
+    <section class="weather-app">
         <div class="container">
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6 mt-5 p-4 border">
+                
+                <div class=" mt-5 p-4 border">
                 <h3 class="mb-3 title"><strong> Weather</strong></h3>
                 <!-- row 2 -->
                 <div class="container">
@@ -47,19 +49,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 pt-3 ps-3">
-                            <h4 class="city-name"><strong>City Name</strong> </h4>
-                                <li class="datentime ms-2">Wednesday</li>
-                                <li class="datentime ms-2"> -- : -- PM </li>
+                            <h4 id="maincity" class="city-name"><strong>City Name</strong> </h4>
+                                <li id="mainday" class="datentime ms-2">Wednesday</li>
+                                <li  class="datentime ms-2"> Last Updated: <span id="maintime"></span></li>
                             
                         </div>
 
                         <div class="col-md-2 pt-4">
-                            <h1 class="ms-5 text-end bigemoji">☀️</h1>
+                            <img src="" id="bigemoji" class="ms-5 text-end bigemoji"></img>
                         </div>
 
                         <div class="col-md-4 pt-3">
-                            <span class="temperature me-2">36 <sup class="units mb-2"><a href=""> °C</a> / <a href="">°F</a></sup></span>
-                            
+                            <span id="maintemp" class="temperature me-2"> </span><sup class="units mb-2"><a class="units" href=""> °C</a> / <a class="units" href="">°F</a></sup>
                         </div>
 
                         
@@ -70,11 +71,11 @@
                 <div class="container">
                     <div class="row mt-3">
                         <div class="col-md-5">
-                            <p class="ms-2 description">Description</p>
+                            <p id="maindesc" class="ms-2 description">Description</p>
                         </div>
                         <div class="col-md-2"></div>
                         <div class="col-md-5">
-                            <span class="ms-2 text-end extras">Humidity : - % , Wind : - mp/h</span>
+                            <span class="ms-2 text-end extras">Humidity : <span id="mainhumidity"> </span> % , Wind : <span id="mainwind"> </span> mp/h</span>
                         </div>
                         
                     </div>
@@ -144,10 +145,10 @@
                         <div class="col-md-3"></div>
                     </div>
                 </div>
-                <div class="col-3"></div>
+                
             </div>
         </div>
     </section>
-    
+    <script src="src/javascript.js"></script>
   </body>
 </html>

@@ -1,7 +1,11 @@
 body {
   font-family: "Inter", sans-serif;
 }
-div.col-6.mt-5.p-4.border {
+.weather-app {
+  width: 700px;
+  margin: 0 auto;
+}
+div.mt-5.p-4.border {
   border-radius: 20px;
 }
 h3.mb-3.title {
@@ -39,12 +43,21 @@ span.temperature {
 sup {
   font-size: 18px;
 }
-h1.ms-5.text-end.bigemoji {
-  font-size: 45px;
+a.units {
+  text-decoration: none;
+  color: #807979;
+}
+img.ms-5.text-end.bigemoji {
+  /* font-size: 45px; */
+  display: inline;
+  width: 100px;
+  padding-right: 40px;
+  margin-top: -5px;
 }
 p.ms-2.description {
   font-size: 12px;
   letter-spacing: 1px;
+  text-transform: capitalize;
 }
 span.ms-2.text-end.extras {
   font-size: 12px;
