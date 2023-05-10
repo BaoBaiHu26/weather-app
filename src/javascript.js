@@ -60,7 +60,6 @@ if (hours <= 12) {
 }
 
 function showTemp(response) {
-  console.log(response.data);
   let mainTemp = document.querySelector("#maintemp");
   let mainCity = document.querySelector("#maincity");
   let mainDesc = document.querySelector("#maindesc");
@@ -69,7 +68,9 @@ function showTemp(response) {
   let mainDay = document.querySelector("#mainday");
   let mainTime = document.querySelector("#maintime");
   let mainemoji = document.querySelector("#bigemoji");
-  mainTemp.innerHTML = Math.round(response.data.main.temp);
+
+  celsciusTemp = response.data.main.temp;
+  mainTemp.innerHTML = Math.round(celsciusTemp);
   mainCity.innerHTML = response.data.name;
   mainDesc.innerHTML = response.data.weather[0].description;
   mainHum.innerHTML = response.data.main.humidity;
@@ -80,7 +81,46 @@ function showTemp(response) {
   );
 }
 
-let apiKey = "b64318e94d52af1eebd0bbbbcb9290b0";
-let city = "New York";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+function search(city) {
+  let apiKey = "b64318e94d52af1eebd0bbbbcb9290b0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let inputCity = document.querySelector("#city-input");
+  search(inputCity.value);
+}
+
+function displayFahTemp(event) {
+  event.preventDefault();
+  let convertedFahTemp = (celsciusTemp * 9) / 5 + 32;
+  celsTemp.classList.remove("active");
+  fahrenTemp.classList.add("active");
+  let celtofahTemp = document.querySelector("#maintemp");
+  celtofahTemp.innerHTML = Math.round(convertedFahTemp);
+}
+
+function displayCelTemp(event) {
+  event.preventDefault();
+  celsTemp.classList.add("active");
+  fahrenTemp.classList.remove("active");
+  let celtofahTemp = document.querySelector("#maintemp");
+  celtofahTemp.innerHTML = Math.round(celsciusTemp);
+}
+
+// creating global variable
+let celsciusTemp = null;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+// temperature convert
+let fahrenTemp = document.querySelector("#fahlink");
+fahrenTemp.addEventListener("click", displayFahTemp);
+
+let celsTemp = document.querySelector("#cellink");
+celsTemp.addEventListener("click", displayCelTemp);
+
+search("Bangkok");

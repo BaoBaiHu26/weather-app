@@ -42,10 +42,18 @@ span.temperature {
 }
 sup {
   font-size: 18px;
+  color: #807979;
 }
 a.units {
   text-decoration: none;
+}
+a.units.active {
+  text-decoration: none;
   color: #807979;
+  cursor: default;
+}
+a.units.active:hover {
+  text-decoration: none;
 }
 img.ms-5.text-end.bigemoji {
   /* font-size: 45px; */

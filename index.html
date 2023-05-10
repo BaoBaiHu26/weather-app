@@ -27,21 +27,23 @@
                 <div class=" mt-5 p-4 border">
                 <h3 class="mb-3 title"><strong> Weather</strong></h3>
                 <!-- row 2 -->
-                <div class="container">
-                    <div class="row mb-3">
-                        
-                        <div class="col-md-6">
-                            <input type="search" placeholder=" 🔍  Search for a city ....." class="form-control search-input">
+                <form id="search-form" action="">
+                    <div class="container">
+                        <div class="row mb-3">
+                            
+                            <div class="col-md-6">
+                                <input id="city-input" type="search" placeholder=" 🔍  Search for a city ....." class="form-control search-input">
+                            </div>
+                            <div class="col-md-3 search-button ps-2">
+                                <input  type="submit" value="Search" class="btn btn-primary w-100 mx-auto">
+                            </div>
+                            <div class="col-md-3 search-button">
+                                <input id="current" type="submit" value="Current" class="btn btn-primary w-100 mx-auto">
+                            </div>
+                            
                         </div>
-                        <div class="col-md-3 search-button ps-2">
-                            <input type="submit" value="Search" class="btn btn-primary w-100 mx-auto">
-                        </div>
-                        <div class="col-md-3 search-button">
-                            <input type="submit" value="Current" class="btn btn-primary w-100 mx-auto">
-                        </div>
-                        
                     </div>
-                </div>
+                </form>
 
                 <section class="border mb-3">
 
@@ -60,7 +62,8 @@
                         </div>
 
                         <div class="col-md-4 pt-3">
-                            <span id="maintemp" class="temperature me-2"> </span><sup class="units mb-2"><a class="units" href=""> °C</a> / <a class="units" href="">°F</a></sup>
+                            <span id="maintemp" class="temperature me-2"> </span>
+                            <sup class="mb-2"><a id="cellink" href="#" class=" units active">°C </a> / <a id="fahlink" class="units" href="#">°F</a> </sup>
                         </div>
 
                         
