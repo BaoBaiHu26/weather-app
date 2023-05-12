@@ -110,6 +110,28 @@ function displayCelTemp(event) {
   celtofahTemp.innerHTML = Math.round(celsciusTemp);
 }
 
+// forecast
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let forecastHTML = ``;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tues", "Wed", "Thurs"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div id="forecast" class="">
+    <h5 class="text-center date">${day}</h5>
+    <img src="https://openweathermap.org/img/wn/04d@2x.png" class="w-75 mx-auto ps-2" alt="">
+    <p class="text-center minmax">🔺<span class="forecast-max">--</span>, 🔻<span class="forecast-min">--</span></p>
+  </div>`;
+  });
+
+  // forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 // creating global variable
 let celsciusTemp = null;
 
