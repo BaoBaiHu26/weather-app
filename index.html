@@ -63,7 +63,8 @@
 
                         <div class="col-md-4 pt-3">
                             <span id="maintemp" class="temperature me-2"> </span>
-                            <sup class="mb-2"><a id="cellink" href="#" class=" units active">°C </a> / <a id="fahlink" class="units" href="#">°F</a> </sup>
+                            <sup class="mb-2"><a id="cellink" href="#" class=" units active">°C </a> </sup>
+                                <!-- <a id="fahlink" class="units" href="#">°F</a>  -->
                         </div>
 
                         
@@ -88,48 +89,12 @@
                 <div class="container">
                     <div id="forecast" class="d-flex flex-row">
                         
-                        <div class="day-weather">
-                            <h5 class="text-center date">Thurs</h5>
-                            <img src="https://openweathermap.org/img/wn/04d@2x.png" class="w-75 mx-auto ps-2" alt="">
-                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
-
-                        </div>
-                        <div class="day-weather">
-                            <h5 class="text-center date">Fri</h5>
-                            <img src="https://openweathermap.org/img/wn/04d@2x.png" class="w-75 mx-auto ps-2" alt="">
-                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
-
-                        </div>
-                        <div class="day-weather">
-                            <h5 class="text-center date">Sat</h5>
-                            <img src="https://openweathermap.org/img/wn/04d@2x.png" class="w-75 mx-auto ps-2" alt="">
-                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
-
-                        </div>
-                        <div class="day-weather">
-                            <h5 class="text-center date">Sun</h5>
-                            <img src="https://openweathermap.org/img/wn/04d@2x.png" class="w-75 mx-auto ps-2" alt="">
-                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
-
-                        </div>
-                        <div class="day-weather">
-                            <h5 class="text-center date">Mon</h5>
-                            <img src="https://openweathermap.org/img/wn/04d@2x.png" class="w-75 mx-auto ps-2" alt="">
-                            <p class="text-center minmax">🔺<span>--</span>, 🔻<span>--</span>  </p>
-
-                        </div>
-                        <div class="day-weather">
-                            <h5 class="text-center date">Tue</h5>
-                            <img src="https://openweathermap.org/img/wn/04d@2x.png" class="w-75 mx-auto ps-2" alt="">
-                            <p class="text-center minmax">🔺<span>--</span> , 🔻<span>--</span>  </p>
-
-                        </div>
                     </div>
                 </div>
                 <!-- row 6 -->
                 <div class="container">
                     <div class="row">
-                        <p class="results text-muted">results for latitude: -----.---- , longitude: -----.---</p>
+                        <p class="results text-muted">results for latitude: <span id="latitude">-----.---- </span> , longitude: <span id="longitude">-----.---</span> </p>
                 </div>
                 </section>
 
