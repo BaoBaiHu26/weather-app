@@ -59,6 +59,14 @@ if (hours <= 12) {
   mainTime.innerHTML = `${hours}:${minutes} PM`;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apikey = "19068f8a321ad3b406b14t19od030ff8";
+  let apiforecastURL = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apikey}&units=metric`;
+  console.log(apiforecastURL);
+  axios.get(apiforecastURL).then(displayForecast);
+}
+
 function showTemp(response) {
   let mainTemp = document.querySelector("#maintemp");
   let mainCity = document.querySelector("#maincity");
@@ -79,6 +87,8 @@ function showTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -111,7 +121,8 @@ function displayCelTemp(event) {
 }
 
 // forecast
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecast = document.querySelector("#forecast");
   let forecastHTML = ``;
   let days = ["Fri", "Sat", "Sun", "Mon", "Tues", "Wed", "Thurs"];
@@ -129,8 +140,6 @@ function displayForecast() {
   // forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
 }
-
-displayForecast();
 
 // creating global variable
 let celsciusTemp = null;
